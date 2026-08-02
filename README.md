@@ -8,7 +8,7 @@ Next.js 16 (App Router) · TypeScript · Tailwind v4 · site 100% estático.
 ```bash
 pnpm install
 pnpm dev      # http://localhost:3000
-pnpm build    # gera as 11 rotas estáticas
+pnpm build    # gera as 11 páginas estáticas + robots, sitemap e cartão de link
 pnpm lint
 ```
 
@@ -34,8 +34,35 @@ com dados inventados.
    `src/content/exames.ts` contra o site do France Éducation International:
    taxas e regras mudam por país e por centro.
 
-Depois: apontar `site.url` para o domínio real (usado no `metadataBase` e no
-JSON-LD).
+---
+
+## Deploy e domínio
+
+Não há backend, banco nem variável secreta: a Vercel só precisa do repositório.
+`pnpm build` roda com as configurações padrão e tudo sai como arquivo estático.
+
+**O domínio `francesdoseujeito.com.br` ainda não foi registrado** (consulta ao
+registro.br em 02/08/2026). Até ele existir, defina na Vercel:
+
+```
+NEXT_PUBLIC_SITE_URL = https://<o-projeto>.vercel.app
+```
+
+É essa URL que vira `metadataBase`, `sitemap.xml`, `robots.txt` e o endereço da
+imagem de preview. Apontando para um domínio que não resolve, o WhatsApp mostra
+o link sem imagem. No dia em que o domínio entrar no ar, **apague a variável** —
+o padrão em `src/content/site.ts` já é o domínio definitivo. Deploys de preview
+usam sempre a URL do próprio deploy, sem precisar de configuração.
+
+### Cartão de link (`src/app/opengraph-image.tsx`)
+
+É o que aparece quando alguém cola o link no WhatsApp ou no Instagram — na
+prática, a primeira tela da escola. Gerado no build, vira PNG estático.
+
+As fontes da marca estão em `src/fonts/` **em TTF** porque o gerador precisa
+lê-las do disco: ele não entende woff2, e as fontes do `next/font` só existem no
+CSS do site. São as mesmas famílias (Cormorant Garamond e Jost), sob licença
+OFL, com o texto da licença ao lado dos arquivos.
 
 ---
 
