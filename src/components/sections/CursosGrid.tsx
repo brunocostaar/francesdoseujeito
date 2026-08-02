@@ -13,7 +13,7 @@ export function CursosGrid({
         {comCabecalho && (
           <SectionHeading
             sobretitulo="Nos cours"
-            titulo="Do primeiro bonjour ao DALF C2"
+            titulo="Do primeiro bonjour à fluência"
             descricao="Seis níveis, um caminho contínuo. Você entra onde está e sai onde quer chegar."
           />
         )}

@@ -17,7 +17,7 @@ export const faq: Pergunta[] = [
   {
     pergunta: "Como funcionam as aulas na prática?",
     resposta:
-      "Ao vivo, por videochamada, com 60 minutos cada. Você recebe o material antes e o cronograma de atividades em autonomia depois de cada aula. Falamos francês desde a primeira aula, com o português como rede de segurança nos primeiros meses.",
+      "Ao vivo, por videochamada, com 1h de duração. Você recebe o material antes e o cronograma de atividades em autonomia depois de cada aula. Falamos francês desde o início, usando o português como rede de segurança nos primeiros meses.",
   },
   {
     pergunta: "Quanto tempo leva para ficar fluente?",
@@ -27,7 +27,7 @@ export const faq: Pergunta[] = [
   {
     pergunta: "Vocês preparam para o DELF, DALF, TCF e TEF?",
     resposta:
-      "Sim, e essa é boa parte do que faço. A preparação usa simulados completos, correção pela grade oficial de avaliação e treino cronometrado do oral. Vale reservar pelo menos 3 meses antes da data da prova.",
+      "Sim, e essa é boa parte do que faço. A preparação usa simulados completos, correção pela grade oficial de avaliação e treino cronometrado. Vale reservar pelo menos 3 meses antes da data da prova.",
   },
   {
     pergunta: "Como faço o pagamento?",

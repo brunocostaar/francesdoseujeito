@@ -61,14 +61,14 @@ export const exames: Exame[] = [
       },
       {
         nome: "Compreensão escrita",
-        duracao: "30 a 60 min",
+        duracao: "30 min a 1h",
         pontos: "25 pontos",
         descricao:
           "Textos informativos e argumentativos. Nos níveis altos, artigos de imprensa com posicionamento implícito.",
       },
       {
         nome: "Produção escrita",
-        duracao: "30 a 60 min",
+        duracao: "30 min a 1h",
         pontos: "25 pontos",
         descricao:
           "Do recado simples no A1 à dissertação argumentada no B2 e à síntese de documentos no DALF — a prova que mais elimina candidatos.",
@@ -119,14 +119,14 @@ export const exames: Exame[] = [
       },
       {
         nome: "Compreensão escrita",
-        duracao: "~60 min",
+        duracao: "~1h",
         pontos: "escala 0–699",
         descricao:
           "Múltipla escolha sobre avisos, e-mails, artigos e textos literários. O tempo é o principal inimigo.",
       },
       {
         nome: "Produção escrita",
-        duracao: "60 min",
+        duracao: "1h",
         pontos: "escala 0–699",
         descricao:
           "Três tarefas encadeadas, da mensagem prática ao texto argumentativo. Avaliada por examinadores humanos.",

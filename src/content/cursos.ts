@@ -33,7 +33,7 @@ export const cursos: Curso[] = [
     subtitulo: "Os primeiros passos, sem medo de errar",
     resumoCurto: "Do zero: se apresentar e sobreviver ao dia a dia.",
     duracao: "4 a 6 meses",
-    cargaHoraria: "Uma aula de 60 min por semana",
+    cargaHoraria: "Uma aula de 1h por semana",
     publico:
       "Quem nunca estudou francês, ou tentou uma vez e parou antes de conseguir falar qualquer coisa.",
     voceVaiConseguir: [
@@ -63,7 +63,7 @@ export const cursos: Curso[] = [
     subtitulo: "Conversa de verdade sobre o seu dia",
     resumoCurto: "Conversar sobre rotina, passado e planos.",
     duracao: "5 a 7 meses",
-    cargaHoraria: "Uma aula de 60 min por semana",
+    cargaHoraria: "Uma aula de 1h por semana",
     publico:
       "Quem já se vira com frases prontas e quer construir as próprias frases sem travar no meio.",
     voceVaiConseguir: [
@@ -93,7 +93,7 @@ export const cursos: Curso[] = [
     subtitulo: "Autonomia — o nível que abre portas",
     resumoCurto: "Autonomia: o nível pedido em vistos e imigração.",
     duracao: "6 a 8 meses",
-    cargaHoraria: "Uma aula de 60 min por semana",
+    cargaHoraria: "Uma aula de 1h por semana",
     publico:
       "Quem precisa comprovar nível para imigração, trabalho ou intercâmbio, e quem quer finalmente conversar sem esforço.",
     voceVaiConseguir: [
@@ -123,7 +123,7 @@ export const cursos: Curso[] = [
     subtitulo: "O nível exigido pelas universidades francesas",
     resumoCurto: "Exigido por universidades e empregos na França.",
     duracao: "7 a 9 meses",
-    cargaHoraria: "Uma aula de 60 min por semana",
+    cargaHoraria: "Uma aula de 1h por semana",
     publico:
       "Quem vai estudar ou trabalhar em francês e precisa de fluência com precisão — e, quase sempre, de um diploma para comprovar.",
     voceVaiConseguir: [
@@ -153,7 +153,7 @@ export const cursos: Curso[] = [
     subtitulo: "Fluência espontânea, no trabalho e na vida",
     resumoCurto: "Fluência espontânea e registro profissional.",
     duracao: "8 a 12 meses",
-    cargaHoraria: "Uma aula de 60 min por semana",
+    cargaHoraria: "Uma aula de 1h por semana",
     publico:
       "Quem já vive ou trabalha em francês e quer parar de soar como estrangeiro que aprendeu a língua.",
     voceVaiConseguir: [

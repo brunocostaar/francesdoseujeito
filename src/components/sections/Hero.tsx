@@ -34,14 +34,13 @@ export function Hero() {
           <h1 className="font-display text-encre mt-6 text-4xl leading-[1.08] font-semibold text-balance sm:text-5xl lg:text-6xl">
             Bonjour !{" "}
             <span className="text-bordeaux">
-              Seu francês começa numa conversa
+              Seu francês começa numa conversa!
             </span>
-            , não num livro de gramática.
           </h1>
 
           <p className="text-encre-soft mt-6 max-w-xl text-lg leading-relaxed text-pretty">
-            Aulas individuais e ao vivo, do A1 ao C2, montadas em cima do seu
-            objetivo — viajar, estudar fora, mudar de país ou passar no DELF.
+            Aulas individuais e ao vivo, do básico ao avançado elaboradas de acordo
+            com o seu objetivo: viajar, estudar fora, mudar de país ou passar no DELF.
             Você fala francês desde a primeira aula.
           </p>
 

@@ -20,7 +20,7 @@ export const professora = {
   bio: [
     "Aprender francês é muito mais do que dominar uma nova língua: é abrir portas para universidades, oportunidades profissionais, viagens e para uma das culturas mais fascinantes do mundo. Há mais de 20 anos dedico minha carreira ao ensino de Francês como Língua Estrangeira (FLE), ajudando alunos de todos os perfis a chegarem lá com método e acompanhamento personalizado.",
     "Sou Doutora em Letras – Cultura e Tradução, Mestre em Letras e Especialista em Língua e Literatura Francesas pela Universidade Federal da Paraíba (UFPB), com especialização em FLE no Centre International d'Études Pédagogiques (CIEP), na França — referência mundial na formação de professores de francês.",
-    "Sou habilitada pelo CIEP para aplicar e corrigir os exames oficiais DELF/DALF nos níveis A1 e A2, o que me permite preparar você exatamente pelos critérios internacionais de certificação.",
+    "Sou habilitada para aplicação de provas do DELF, o que me permite preparar você exatamente pelos critérios internacionais de certificação.",
     "Lecionei na Aliança Francesa de João Pessoa, na UFPB, na UEPB, na UNINASSAU e no Centro Estadual de Línguas. Na França, fiz intercâmbio na Université de Technologie de Compiègne (UTC), pesquisei na Bibliothèque nationale de France (BnF) e realizei estágio doutoral na Université de Versailles Saint-Quentin-en-Yvelines (UVSQ), como bolsista da CAPES.",
     "Cada curso é planejado a partir do seu objetivo: estudar na França, conquistar uma certificação internacional, impulsionar a carreira, viajar com mais autonomia ou simplesmente descobrir o prazer de falar uma nova língua. Seu projeto com o francês começa aqui. Bienvenue !",
   ],
@@ -30,7 +30,7 @@ export const professora = {
     "Mestre em Letras (UFPB)",
     "Especialista em Língua e Literatura Francesas (UFPB)",
     "Especialização em FLE — CIEP, França",
-    "Habilitada pelo CIEP para DELF/DALF A1 e A2",
+    "Habilitada para aplicação de provas do DELF",
     "Estágio doutoral na UVSQ — bolsista CAPES",
     "22 anos de experiência",
   ],

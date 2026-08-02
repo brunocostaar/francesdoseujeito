@@ -8,21 +8,21 @@ const passos = [
     numero: "01",
     titulo: "Descubra seu nível",
     texto:
-      "Cinco minutos de teste no site e você já sai com uma estimativa de A1 a C2 — sem cadastro, sem e-mail.",
+      "Cinco minutos de teste no site e você já sai com uma estimativa do seu nível. Sem cadastro, sem e-mail.",
   },
   {
     icone: MessageCircle,
     numero: "02",
     titulo: "Converse comigo",
     texto:
-      "Uma conversa gratuita de 30 minutos no WhatsApp ou por vídeo para eu entender seu objetivo e confirmar o nível.",
+      "Uma conversa gratuita de 30 minutos pelo Meet para eu entender seu objetivo e confirmar o seu nível.",
   },
   {
     icone: Video,
     numero: "03",
     titulo: "Comece as aulas",
     texto:
-      "Uma aula ao vivo por semana, no horário que couber na sua rotina, com material e cronograma de autonomia.",
+      "Aulas ao vivo no horário que couber na sua rotina, com material e cronograma de atividades em autonomia.",
   },
 ];
 
