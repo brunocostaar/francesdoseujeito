@@ -9,11 +9,12 @@ export function SobreProfessora() {
     <section id="professora" className="px-4 py-20 sm:px-6">
       <div className="mx-auto grid max-w-6xl items-start gap-14 lg:grid-cols-[0.85fr_1.15fr]">
         <div className="clay clay-blob mx-auto w-full max-w-xs overflow-hidden p-0 lg:sticky lg:top-28">
-          {/* Retrato de estúdio: pouca folga acima da cabeça, então o
-              recorte quadrado ancora no topo em vez de centralizar. */}
+          {/* Retrato de corpo inteiro num arquivo 5:7: centralizar cortaria
+              o alto da cabeça, e ancorar no topo deixa folga demais. 25%
+              enquadra da cabeça até a altura do quadril. */}
           <RetratoProfessora
             src={professora.fotoSecundaria}
-            posicao="center top"
+            posicao="center 25%"
           />
         </div>
 

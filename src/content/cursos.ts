@@ -45,7 +45,7 @@ export const cursos: Curso[] = [
     ],
     conteudo: [
       "Pronúncia e sons que não existem em português (u, r, nasais)",
-      "Presente dos verbos regulares, être, avoir e aller",
+      "Verbos no presente",
       "Artigos, gênero dos substantivos e concordância",
       "Passado composto para contar o que você fez",
       "Vocabulário do cotidiano: casa, comida, cidade, rotina",

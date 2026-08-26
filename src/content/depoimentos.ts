@@ -1,74 +1,42 @@
 /**
- * ⚠️  DEPOIMENTOS FICTÍCIOS — PLACEHOLDER.
+ * Depoimentos reais, enviados pelos próprios alunos.
  *
- * Todos os nomes, textos e resultados abaixo foram INVENTADOS para
- * dar forma ao layout. Publicar depoimento inventado como se fosse
- * real é propaganda enganosa (CDC art. 37) além de queimar a
- * credibilidade da escola.
+ * Só entra aqui o que o aluno escreveu e autorizou. O texto é
+ * reproduzido como veio — a única edição permitida é de digitação
+ * (acento, maiúscula, espaço), nunca de conteúdo.
  *
- * SUBSTITUIR POR DEPOIMENTOS REAIS ANTES DE COLOCAR O SITE NO AR.
+ * `nota` é opcional de propósito: nenhum destes alunos deu uma nota em
+ * estrelas, e atribuir cinco estrelas por conta própria seria inventar
+ * uma avaliação que ninguém fez.
  */
 
 export type Depoimento = {
   nome: string;
   nivel: string;
   texto: string;
-  nota: number;
+  /** Estrelas, quando o aluno de fato avaliou. */
+  nota?: number;
   resultado?: string;
 };
 
 export const depoimentos: Depoimento[] = [
   {
-    nome: "Camila Reis",
-    nivel: "A1 → B1",
-    nota: 5,
-    resultado: "Aprovada no TCF B1",
+    nome: "Rafael Melo",
+    nivel: "Aluno “Objectif DELF”",
+    resultado: "Aprovado no DELF B1 em 3 meses",
     texto:
-      "Comecei do zero absoluto, achando que não tinha ouvido para línguas. Em catorze meses passei no TCF com B1 e consegui a documentação para o Quebec. A Marina nunca me deixou traduzir tudo na cabeça — foi isso que destravou.",
+      "A professora Adriana é simplesmente incrível! Eu tinha um objetivo bem ousado de conseguir o nível B1 em 3 meses e ela sempre foi realista de que seria difícil, mas que com dedicação e seguindo o plano que ela havia criado seria possível. No final conseguimos! Mesmo com nervosismo da minha parte, ela estava lá me aconselhando e ajudando (principalmente na minha conversação) para que no final desse certo.",
   },
   {
-    nome: "Thiago Nakamura",
-    nivel: "B1 → B2",
-    nota: 5,
-    resultado: "Mestrado em Toulouse",
+    nome: "Marise Correia",
+    nivel: "Aluna B2",
     texto:
-      "Precisava de B2 para o mestrado e o prazo era curto. As aulas viraram treino de prova sem perder a conversa. Fiz o DELF B2 com 78 pontos e hoje faço as aulas do mestrado em francês sem legenda mental.",
+      "Além de extremamente preparada, Adriana tem uma paixão contagiante pela língua francesa e suas aulas expressam isso. Além de serem dinâmicas, têm conteúdo de cultura francesa que despertaram em mim ainda mais interesse em aprender a língua. Estratégia excelente! Adriana é super querida, paciente e engraçada também. Então, suas aulas são tudo de bom!",
   },
   {
-    nome: "Renata Oliveira",
-    nivel: "A2",
-    nota: 5,
+    nome: "Luma Medeiros",
+    nivel: "Aluna C1",
     texto:
-      "Já tinha desistido do francês duas vezes em cursos grandes de turma cheia. Aqui é aula individual de verdade: se eu travo num assunto, a gente para e resolve. Faz seis meses e é a primeira vez que eu continuo.",
-  },
-  {
-    nome: "Paulo Menezes",
-    nivel: "B2 → C1",
-    nota: 5,
-    resultado: "Aprovado no DALF C1",
-    texto:
-      "O C1 me assustava pela produção escrita. Fizemos uns quinze essais corrigidos linha por linha, com comentário sobre registro e conectores. Passei de primeira. A correção detalhada foi o que fez diferença.",
-  },
-  {
-    nome: "Juliana Barros",
-    nivel: "A1 → A2",
-    nota: 5,
-    texto:
-      "Meu marido é francês e eu ficava calada nos jantares em família. Hoje eu discuto, brigo e faço piada em francês. A aula tem um clima leve que tira o medo de errar.",
-  },
-  {
-    nome: "Eduardo Lins",
-    nivel: "C1",
-    nota: 5,
-    resultado: "Trabalha em Genebra",
-    texto:
-      "Uso francês no trabalho todos os dias e queria polir o registro profissional. As aulas viraram simulação de reunião e apresentação. Meu chefe suíço comentou a diferença em dois meses.",
-  },
-  {
-    nome: "Fernanda Costa",
-    nivel: "A2 → B1",
-    nota: 4,
-    texto:
-      "Ótima didática e material muito bem organizado. Só senti falta de mais exercícios para fazer entre as aulas no começo — pedi e a Marina passou a montar uma lista semanal.",
+      "A professora Adriana sempre foi muito atenciosa, didática e paciente, e com ela pude avançar no meu próprio ritmo sem me sentir pressionada. Percebi uma evolução natural no meu francês ao longo das aulas. Sou muito grata por todo o seu cuidado e dedicação!",
   },
 ];

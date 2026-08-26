@@ -173,7 +173,7 @@ function TelaInicial({ onComecar }: { onComecar: () => void }) {
       </h1>
       <p className="text-encre-soft mt-5 text-lg leading-relaxed text-pretty">
         {questoes.length} questões de múltipla escolha, em dificuldade
-        crescente, do A1 ao C2. Você recebe uma estimativa do seu nível no fim —
+        crescente, do A1 ao B2. Você recebe uma estimativa do seu nível no fim —
         sem cadastro, sem e-mail, sem pegadinha.
       </p>
 

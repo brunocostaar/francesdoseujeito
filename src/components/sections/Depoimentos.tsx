@@ -20,7 +20,7 @@ export function Depoimentos() {
         <SectionHeading
           sobretitulo="Ils en parlent"
           titulo="Quem já passou por aqui"
-          descricao="Alunos que começaram travados e hoje moram, estudam ou trabalham em francês."
+          descricao="O que os alunos escreveram sobre as aulas, com as palavras deles."
         />
 
         {/*
@@ -34,8 +34,9 @@ export function Depoimentos() {
               key={d.nome}
               className="clay clay-blanc mb-6 break-inside-avoid p-7"
             >
+              {/* Estrelas só quando o aluno avaliou; ver content/depoimentos.ts. */}
               <div className="flex items-center justify-between gap-3">
-                <Estrelas nota={d.nota} />
+                {d.nota ? <Estrelas nota={d.nota} /> : <span />}
                 <Quote
                   className="text-clay-deep size-6 shrink-0"
                   aria-hidden="true"

@@ -121,13 +121,21 @@ dobra o trabalho sem retorno para este público.
 
 ## Como o teste de nível pontua
 
-24 questões, 4 por nível, do A1 ao C2. O nível estimado é **o mais alto em que
-o aluno acertou ao menos 3 das 4**, varrendo A1→C2 e parando no primeiro nível
+24 questões, 6 por nível, do A1 ao B2. O nível estimado é **o mais alto em que
+o aluno acertou ao menos 4 das 6**, varrendo A1→B2 e parando no primeiro nível
 em que ele falha.
 
-O corte sequencial é proposital: somar pontos daria crédito por acertos
-isolados no C2 a quem ainda erra o presente do indicativo. Assim o resultado
-também é explicável para o aluno em uma frase.
+O teto é o B2 de propósito: o teste não estima C1 nem C2, porque a distância
+entre esses dois níveis não se mede por múltipla escolha. Quem passa no bloco
+B2 recebe B2 e o convite para confirmar o nível numa conversa.
+
+Seis itens por nível em vez de quatro: com 4 de 6 para passar, dois erros bobos
+não derrubam o aluno um nível inteiro, e a chance de passar num bloco só no
+chute cai de 5,1% para 3,8%.
+
+O corte sequencial também é proposital: somar pontos daria crédito por acertos
+isolados no B2 a quem ainda erra o presente do indicativo. Assim o resultado
+é explicável para o aluno em uma frase.
 
 Quem não atinge o mínimo nem no A1 recebe A1 — é o ponto de partida do curso,
 não uma nota de reprovação.

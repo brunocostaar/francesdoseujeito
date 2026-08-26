@@ -1,3 +1,9 @@
+# Repo de um pacote só. O campo `packages` não é opcional: sem ele o
+# pnpm trata o arquivo como workspace vazio e aborta qualquer comando
+# rodado aqui dentro ("packages field missing or empty").
+packages:
+  - .
+
 allowBuilds:
   sharp: true
   unrs-resolver: true

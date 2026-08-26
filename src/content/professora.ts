@@ -5,9 +5,9 @@ export const professora = {
   assinaturaMarca: "Professora Adriana Cláudia",
   /** Curto de propósito: aparece no card sobreposto ao retrato do hero. */
   titulo: "Doutora em Letras e professora de FLE",
-  /** Retrato do hero — Paris, contexto. */
+  /** Retrato do hero — estúdio, quadrado (o recorte .clay-blob é 1:1). */
   foto: "/professora.jpg",
-  /** Retrato de estúdio, usado na seção "Qui suis-je". */
+  /** Retrato de estúdio de corpo inteiro, usado na seção "Qui suis-je". */
   fotoSecundaria: "/professora-2.jpg",
 
   chamada: "Aprenda francês com excelência, experiência e uma formação internacional",

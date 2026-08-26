@@ -11,12 +11,12 @@ export type ResultadoTeste = {
   totalQuestoes: number;
 };
 
-const MINIMO_POR_NIVEL = 3;
+const MINIMO_POR_NIVEL = 4;
 
 /**
- * Nível estimado = o mais alto em que o aluno acertou pelo menos 3 das
- * 4 questões, varrendo A1→C2 e PARANDO no primeiro nível em que ele
- * falha. Somar pontos daria crédito por acertos isolados em C2 de quem
+ * Nível estimado = o mais alto em que o aluno acertou pelo menos 4 das
+ * 6 questões, varrendo A1→B2 e PARANDO no primeiro nível em que ele
+ * falha. Somar pontos daria crédito por acertos isolados no B2 a quem
  * ainda erra o presente do indicativo — o corte sequencial é mais
  * honesto e muito mais fácil de explicar para o aluno.
  *
@@ -89,20 +89,6 @@ export const leituraDoNivel: Record<
     voceJa:
       "Você acompanha debates, lê textos densos e se expressa com nuance. Os erros que restam são de precisão, não de compreensão.",
     proximoPasso:
-      "O B2 é o nível exigido pelas universidades francesas. O curso foca em dissertação, síntese e no polimento que separa 'entendo tudo' de 'escrevo bem'.",
-  },
-  C1: {
-    titulo: "Você está próximo do domínio",
-    voceJa:
-      "Você fala com espontaneidade, capta ironia e subentendido, e adapta o registro ao contexto. Poucos brasileiros chegam aqui.",
-    proximoPasso:
-      "No C1 trabalhamos estilística, síntese de documentos e francês de especialidade — e o DALF C1 fica ao alcance.",
-  },
-  C2: {
-    titulo: "Você domina o francês",
-    voceJa:
-      "Você compreende praticamente tudo que lê ou ouve e se expressa com precisão de nuance. Seu francês está no teto da escala oficial.",
-    proximoPasso:
-      "O C2 é trabalho de refinamento e voz autoral: literatura, retórica, tradução e preparação para o DALF C2.",
+      "O B2 é o nível exigido pelas universidades francesas. O curso foca em dissertação, síntese e no polimento que separa 'entendo tudo' de 'escrevo bem'. O teste para no B2: se o seu francês já for de C1 ou C2, a gente confirma isso numa conversa.",
   },
 };
