@@ -20,7 +20,7 @@ function urlPublica() {
     return `https://${vercel}`;
   }
 
-  return "https://francesdoseujeito.com.br";
+  return "https://francesdoseujeito.com";
 }
 
 /** Dados globais da escola. */

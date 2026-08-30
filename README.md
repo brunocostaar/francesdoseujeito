@@ -41,8 +41,7 @@ com dados inventados.
 Não há backend, banco nem variável secreta: a Vercel só precisa do repositório.
 `pnpm build` roda com as configurações padrão e tudo sai como arquivo estático.
 
-**O domínio `francesdoseujeito.com.br` ainda não foi registrado** (consulta ao
-registro.br em 02/08/2026). Até ele existir, defina na Vercel:
+**O domínio `francesdoseujeito.com` ja foi registrado.**
 
 ```
 NEXT_PUBLIC_SITE_URL = https://<o-projeto>.vercel.app
@@ -71,15 +70,15 @@ OFL, com o texto da licença ao lado dos arquivos.
 Todo o conteúdo editável vive em `src/content/` — dá para trocar textos,
 preços e questões sem abrir um componente.
 
-| Arquivo | O que controla |
-|---|---|
-| `src/content/site.ts` | nome, WhatsApp, redes, números do hero |
-| `src/content/professora.ts` | bio e credenciais |
-| `src/content/depoimentos.ts` | depoimentos (hoje fictícios) |
-| `src/content/cursos.ts` | os 6 níveis: preço, duração, conteúdo |
-| `src/content/exames.ts` | DELF/DALF e TCF/TEF |
-| `src/content/faq.ts` | perguntas frequentes |
-| `src/content/teste/questoes.ts` | as 24 questões do teste de nível |
+| Arquivo                           | O que controla                             |
+| --------------------------------- | ------------------------------------------ |
+| `src/content/site.ts`           | nome, WhatsApp, redes, números do hero    |
+| `src/content/professora.ts`     | bio e credenciais                          |
+| `src/content/depoimentos.ts`    | depoimentos (hoje fictícios)              |
+| `src/content/cursos.ts`         | os 6 níveis: preço, duração, conteúdo |
+| `src/content/exames.ts`         | DELF/DALF e TCF/TEF                        |
+| `src/content/faq.ts`            | perguntas frequentes                       |
+| `src/content/teste/questoes.ts` | as 24 questões do teste de nível         |
 
 Dois utilitários centrais:
 
