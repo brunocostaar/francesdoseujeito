@@ -45,6 +45,7 @@ Não há backend, banco nem variável secreta: a Vercel só precisa do repositó
 
 ```
 NEXT_PUBLIC_SITE_URL = https://<o-projeto>.vercel.app
+FACEBOOK_APP_ID = <id-numérico-do-aplicativo-na-Meta>
 ```
 
 É essa URL que vira `metadataBase`, `sitemap.xml`, `robots.txt` e o endereço da
@@ -52,6 +53,10 @@ imagem de preview. Apontando para um domínio que não resolve, o WhatsApp mostr
 o link sem imagem. No dia em que o domínio entrar no ar, **apague a variável** —
 o padrão em `src/content/site.ts` já é o domínio definitivo. Deploys de preview
 usam sempre a URL do próprio deploy, sem precisar de configuração.
+
+`FACEBOOK_APP_ID` é opcional e adiciona a tag `fb:app_id` usada pelas
+ferramentas da Meta. Configure apenas com o ID real de um aplicativo; a tag
+não é necessária para o Open Graph nem para a prévia comum de compartilhamento.
 
 ### Cartão de link (`src/app/opengraph-image.tsx`)
 

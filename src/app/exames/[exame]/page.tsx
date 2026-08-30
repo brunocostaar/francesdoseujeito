@@ -7,6 +7,7 @@ import { ClayCard } from "@/components/ui/ClayCard";
 import { Pill } from "@/components/ui/Pill";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { exames, examesPorSlug, type ExameSlug } from "@/content/exames";
+import { site } from "@/content/site";
 import { msgExame } from "@/lib/whatsapp";
 
 type Props = { params: Promise<{ exame: string }> };
@@ -20,9 +21,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const exame = examesPorSlug[slug as ExameSlug];
   if (!exame) return {};
 
+  const title = `${exame.sigla} — o que é, estrutura e como se preparar`;
+  const description = `${exame.subtitulo}. Níveis: ${exame.niveis}. Validade: ${exame.validade}.`;
+  const path = `/exames/${exame.slug}`;
+
   return {
-    title: `${exame.sigla} — o que é, estrutura e como se preparar`,
-    description: `${exame.subtitulo}. Níveis: ${exame.niveis}. Validade: ${exame.validade}.`,
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "website",
+      url: `${site.url}${path}`,
+      title,
+      description,
+      locale: "pt_BR",
+      siteName: site.nome,
+    },
   };
 }
 

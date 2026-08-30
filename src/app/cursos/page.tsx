@@ -3,11 +3,24 @@ import { CtaFinal } from "@/components/sections/CtaFinal";
 import { CursosGrid } from "@/components/sections/CursosGrid";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { cursos } from "@/content/cursos";
+import { site } from "@/content/site";
+
+const title = "Cursos de francês do A1 ao C2";
+const description =
+  "Seis níveis de francês online com aulas individuais ao vivo. Compare os níveis do QECR, veja duração, conteúdo e preço de cada curso.";
 
 export const metadata: Metadata = {
-  title: "Cursos de francês do A1 ao C2",
-  description:
-    "Seis níveis de francês online com aulas individuais ao vivo. Compare os níveis do QECR, veja duração, conteúdo e preço de cada curso.",
+  title,
+  description,
+  alternates: { canonical: "/cursos" },
+  openGraph: {
+    type: "website",
+    url: `${site.url}/cursos`,
+    title,
+    description,
+    locale: "pt_BR",
+    siteName: site.nome,
+  },
 };
 
 export default function CursosPage() {

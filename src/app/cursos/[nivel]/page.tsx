@@ -6,6 +6,7 @@ import { ClayButton } from "@/components/ui/ClayButton";
 import { ClayCard } from "@/components/ui/ClayCard";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { cursos, getCurso } from "@/content/cursos";
+import { site } from "@/content/site";
 import { msgCurso } from "@/lib/whatsapp";
 
 type Props = { params: Promise<{ nivel: string }> };
@@ -19,9 +20,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const curso = getCurso(nivel);
   if (!curso) return {};
 
+  const title = `Curso de francês ${curso.nivel} — ${curso.titulo}`;
+  const description = `${curso.subtitulo}. ${curso.cargaHoraria}, duração de ${curso.duracao}. Aulas individuais online.`;
+  const path = `/cursos/${curso.slug}`;
+
   return {
-    title: `Curso de francês ${curso.nivel} — ${curso.titulo}`,
-    description: `${curso.subtitulo}. ${curso.cargaHoraria}, duração de ${curso.duracao}. Aulas individuais online.`,
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "website",
+      url: `${site.url}${path}`,
+      title,
+      description,
+      locale: "pt_BR",
+      siteName: site.nome,
+    },
   };
 }
 

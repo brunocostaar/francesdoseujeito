@@ -26,6 +26,8 @@ const jost = Jost({
   display: "swap",
 });
 
+const facebookAppId = process.env.FACEBOOK_APP_ID?.trim();
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -45,11 +47,13 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
+    url: site.url,
     locale: "pt_BR",
     siteName: site.nome,
     title: `${site.nome} — aulas online de francês`,
     description: site.descricao,
   },
+  ...(facebookAppId ? { facebook: { appId: facebookAppId } } : {}),
   robots: { index: true, follow: true },
 };
 
