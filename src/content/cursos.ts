@@ -91,7 +91,7 @@ export const cursos: Curso[] = [
     nivel: "B1",
     titulo: "Intermediário",
     subtitulo: "Autonomia — o nível que abre portas",
-    resumoCurto: "Autonomia: o nível pedido em vistos e imigração.",
+    resumoCurto: "Autonomia para a vida cotidiana e objetivos de residência.",
     duracao: "6 a 8 meses",
     cargaHoraria: "Uma aula de 1h por semana",
     publico:

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { TesteDeNivel } from "@/components/teste/TesteDeNivel";
 import { site } from "@/content/site";
 
-const title = "Teste de nível de francês grátis";
+const title = "Teste de nível de francês grátis — descubra seu A1 a B2";
 const description =
   "Descubra seu nível de francês do A1 ao B2 em 5 minutos. 24 questões de múltipla escolha, resultado na hora, sem cadastro.";
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: "/teste-de-nivel" },
   openGraph: {

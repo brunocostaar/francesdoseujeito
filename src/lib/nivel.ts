@@ -80,7 +80,7 @@ export const leituraDoNivel: Record<
   B1: {
     titulo: "Você já é independente",
     voceJa:
-      "Você se vira sozinho, defende uma opinião e entende conversas entre nativos com algum esforço. É o nível pedido na maioria dos processos de imigração.",
+      "Você se vira sozinho, defende uma opinião e entende conversas entre nativos com algum esforço. O B1 pode ser exigido em alguns processos de residência; os requisitos variam conforme o país e o pedido.",
     proximoPasso:
       "O B1 consolida subjuntivo, discurso indireto e argumentação — e já é a base para encarar o DELF B1 ou o TCF.",
   },

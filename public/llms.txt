@@ -1,0 +1,38 @@
+# Francês do Seu Jeito
+
+> Escola online de francês, com aulas ao vivo do nível A1 ao C2 e preparação para DELF, DALF, TCF e TEF.
+
+O Francês do Seu Jeito oferece cursos de francês online em grupo reduzido ou no formato individual. As aulas seguem os níveis do Quadro Europeu Comum de Referência (QECR). O atendimento e a contratação são feitos diretamente com a professora pelo WhatsApp; o site não possui checkout, login ou área do aluno.
+
+O conteúdo do site está em português do Brasil. A escola atende pelo e-mail prof.adriana.fr@gmail.com e pelo WhatsApp +55 83 98781-7771.
+
+## Páginas principais
+
+- [Página inicial](https://francesdoseujeito.com/): visão geral da escola, metodologia, professora, cursos, exames, depoimentos e perguntas frequentes.
+- [Cursos de francês](https://francesdoseujeito.com/cursos): comparação dos níveis A1 a C2, com duração, conteúdo e investimento.
+- [Teste de nível](https://francesdoseujeito.com/teste-de-nivel): teste gratuito de 24 questões, com resultado imediato entre A1 e B2 e sem cadastro.
+
+## Cursos por nível
+
+- [Curso A1 — Iniciante](https://francesdoseujeito.com/cursos/a1): primeiros passos no francês para quem começa do zero.
+- [Curso A2 — Básico](https://francesdoseujeito.com/cursos/a2): comunicação sobre rotina, experiências passadas e planos.
+- [Curso B1 — Intermediário](https://francesdoseujeito.com/cursos/b1): desenvolvimento de autonomia em situações cotidianas.
+- [Curso B2 — Avançado](https://francesdoseujeito.com/cursos/b2): argumentação, compreensão e comunicação com maior fluência.
+- [Curso C1 — Proficiente](https://francesdoseujeito.com/cursos/c1): uso avançado do francês em contextos acadêmicos e profissionais.
+- [Curso C2 — Domínio](https://francesdoseujeito.com/cursos/c2): domínio preciso e natural do idioma em alto nível.
+
+## Preparação para exames
+
+- [DELF e DALF](https://francesdoseujeito.com/exames/delf-dalf): estrutura dos diplomas oficiais, níveis, validade e preparação oferecida.
+- [TCF e TEF](https://francesdoseujeito.com/exames/tcf-tef): estrutura dos testes de proficiência, finalidades, validade e preparação oferecida.
+
+## Informações técnicas
+
+- [Sitemap XML](https://francesdoseujeito.com/sitemap.xml): relação canônica das páginas públicas do site.
+- [Robots.txt](https://francesdoseujeito.com/robots.txt): regras de rastreamento do site.
+
+## Contato e presença oficial
+
+- [Instagram](https://instagram.com/francesdoseujeito): perfil oficial @francesdoseujeito.
+- [YouTube](https://www.youtube.com/@francesdoseujeito): canal oficial da escola.
+- [WhatsApp](https://wa.me/5583987817771): atendimento comercial e informações sobre aulas.

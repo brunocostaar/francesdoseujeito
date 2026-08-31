@@ -11,8 +11,9 @@ import { professora } from "@/content/professora";
 import { site } from "@/content/site";
 
 /**
- * Dados estruturados: ajudam o Google a mostrar a escola como
- * organização de ensino e a exibir o FAQ direto no resultado de busca.
+ * Dados estruturados: descrevem a escola e associam as perguntas visíveis
+ * da página às respectivas respostas. A exibição como rich result depende
+ * dos critérios do buscador e não é garantida pela presença da marcação.
  */
 const jsonLd = {
   "@context": "https://schema.org",

@@ -12,6 +12,22 @@ import { msgExame } from "@/lib/whatsapp";
 
 type Props = { params: Promise<{ exame: string }> };
 
+const seoPorExame: Record<
+  ExameSlug,
+  { title: string; description: string }
+> = {
+  "delf-dalf": {
+    title: "Preparação para DELF e DALF online — professora habilitada",
+    description:
+      "Preparação individual para DELF e DALF com simulados e correção pela grade oficial. Professora habilitada para aplicação do DELF.",
+  },
+  "tcf-tef": {
+    title: "TCF ou TEF: qual fazer para imigrar? Preparação online",
+    description:
+      "Entenda as diferenças entre TCF e TEF e prepare-se para imigração, estudos ou trabalho. Aulas online focadas na prova e na sua nota-alvo.",
+  },
+};
+
 export function generateStaticParams() {
   return exames.map((exame) => ({ exame: exame.slug }));
 }
@@ -21,12 +37,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const exame = examesPorSlug[slug as ExameSlug];
   if (!exame) return {};
 
-  const title = `${exame.sigla} — o que é, estrutura e como se preparar`;
-  const description = `${exame.subtitulo}. Níveis: ${exame.niveis}. Validade: ${exame.validade}.`;
+  const { title, description } = seoPorExame[exame.slug];
   const path = `/exames/${exame.slug}`;
 
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: path },
     openGraph: {

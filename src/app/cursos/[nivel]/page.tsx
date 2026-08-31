@@ -5,11 +5,44 @@ import { notFound } from "next/navigation";
 import { ClayButton } from "@/components/ui/ClayButton";
 import { ClayCard } from "@/components/ui/ClayCard";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { cursos, getCurso } from "@/content/cursos";
+import { cursos, getCurso, type Nivel } from "@/content/cursos";
 import { site } from "@/content/site";
 import { msgCurso } from "@/lib/whatsapp";
 
 type Props = { params: Promise<{ nivel: string }> };
+
+const seoPorNivel: Record<Nivel, { title: string; description: string }> = {
+  a1: {
+    title: "Curso de francês A1 para iniciantes — comece do zero",
+    description:
+      "Aprenda francês do zero com aulas online ao vivo. Curso A1 para iniciantes, em grupo reduzido ou individual, com material incluso.",
+  },
+  a2: {
+    title: "Curso de francês A2 online — avance no francês básico",
+    description:
+      "Avance no francês básico e fale sobre rotina, passado e planos. Aulas A2 online ao vivo, em grupo reduzido ou individuais.",
+  },
+  b1: {
+    title: "Curso de francês B1 online — autonomia e imigração",
+    description:
+      "Ganhe autonomia em francês e prepare-se para o DELF B1, TCF ou TEF. Aulas online ao vivo para objetivos pessoais e de residência.",
+  },
+  b2: {
+    title: "Curso de francês B2 online — fluência para estudar",
+    description:
+      "Desenvolva fluência e argumentação em francês para estudos, trabalho e DELF B2. Aulas online ao vivo com acompanhamento personalizado.",
+  },
+  c1: {
+    title: "Curso de francês C1 online — francês avançado",
+    description:
+      "Alcance fluência espontânea em francês para contextos acadêmicos e profissionais. Curso C1 online com aulas ao vivo e individuais.",
+  },
+  c2: {
+    title: "Curso de francês C2 online — domínio e proficiência",
+    description:
+      "Aperfeiçoe precisão, estilo e naturalidade no francês em nível C2. Aulas individuais online para objetivos acadêmicos e profissionais.",
+  },
+};
 
 export function generateStaticParams() {
   return cursos.map((curso) => ({ nivel: curso.slug }));
@@ -20,12 +53,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const curso = getCurso(nivel);
   if (!curso) return {};
 
-  const title = `Curso de francês ${curso.nivel} — ${curso.titulo}`;
-  const description = `${curso.subtitulo}. ${curso.cargaHoraria}, duração de ${curso.duracao}. Aulas individuais online.`;
+  const { title, description } = seoPorNivel[curso.slug];
   const path = `/cursos/${curso.slug}`;
 
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: path },
     openGraph: {

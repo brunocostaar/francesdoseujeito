@@ -44,7 +44,7 @@ export const exames: Exame[] = [
     ],
     paraQuem: [
       "Candidatura a universidades francesas (normalmente B2, às vezes C1)",
-      "Processos de naturalização e residência na França (B1 costuma ser o piso)",
+      "Naturalização na França (B2 desde 2026) e alguns pedidos de cartão de residente (B1)",
       "Concursos e cargos que exigem comprovação permanente de nível",
       "Quem quer um comprovante que não expira nunca",
     ],
