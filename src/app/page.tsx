@@ -20,15 +20,17 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "EducationalOrganization",
+      "@id": `${site.url}/#organization`,
       name: site.nome,
       description: site.descricao,
       url: site.url,
+      logo: `${site.url}/icon.png`,
       email: site.email,
       telephone: `+${site.whatsappNumber}`,
       sameAs: [site.instagram, site.youtube],
-      employee: {
+      founder: {
         "@type": "Person",
-        name: professora.nome,
+        name: professora.nomeSchema,
         jobTitle: professora.titulo,
       },
     },

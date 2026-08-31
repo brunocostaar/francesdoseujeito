@@ -1,6 +1,8 @@
 /** Bio da professora. */
 export const professora = {
   nome: "Profa. Dra. Adriana Cláudia",
+  /** Nome sem títulos, usado em dados estruturados. */
+  nomeSchema: "Adriana Cláudia",
   /** Como o nome assina dentro do logotipo, conforme a folha de marca. */
   assinaturaMarca: "Professora Adriana Cláudia",
   /** Curto de propósito: aparece no card sobreposto ao retrato do hero. */
