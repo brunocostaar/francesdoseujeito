@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Clock, Users } from "lucide-react";
+import { ArrowRight, CalendarDays, Check, Clock, Users } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -7,9 +7,13 @@ import { ClayCard } from "@/components/ui/ClayCard";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { cursos, getCurso, type Nivel } from "@/content/cursos";
 import { site } from "@/content/site";
-import { msgCurso } from "@/lib/whatsapp";
+import { dataInicio, nomeTurma, turmasAbertasDoNivel } from "@/content/turmas";
+import { msgCurso, msgTurma } from "@/lib/whatsapp";
 
 type Props = { params: Promise<{ nivel: string }> };
+
+// Revalida uma vez por dia para o aviso de "próxima turma" sair sozinho.
+export const revalidate = 86400;
 
 const seoPorNivel: Record<Nivel, { title: string; description: string }> = {
   a1: {
@@ -76,6 +80,7 @@ export default async function CursoPage({ params }: Props) {
   const curso = getCurso(nivel);
   if (!curso) notFound();
 
+  const [proximaTurma] = turmasAbertasDoNivel(curso.slug);
   const indice = cursos.findIndex((c) => c.slug === curso.slug);
   const anterior = cursos[indice - 1];
   const proximo = cursos[indice + 1];
@@ -121,6 +126,39 @@ export default async function CursoPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {proximaTurma && (
+        <section className="px-4 pt-4 sm:px-6">
+          <div className="clay clay-encre mx-auto flex max-w-5xl flex-col gap-5 px-7 py-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-4">
+              <CalendarDays className="text-or size-6 shrink-0" aria-hidden="true" />
+              <div>
+                <p className="font-display text-xl font-semibold">
+                  Próxima turma: {dataInicio(proximaTurma, true)}
+                </p>
+                <p className="text-sm text-white/80">
+                  {proximaTurma.diasHorario}
+                  {proximaTurma.vagas !== undefined &&
+                    ` · ${proximaTurma.vagas === 1 ? "última vaga" : `${proximaTurma.vagas} vagas`}`}
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-wrap items-center gap-4">
+              <WhatsAppButton
+                mensagem={msgTurma(nomeTurma(proximaTurma), dataInicio(proximaTurma))}
+              >
+                Quero uma vaga
+              </WhatsAppButton>
+              <Link
+                href="/turmas"
+                className="text-sm font-semibold text-white/80 underline underline-offset-4 hover:text-white"
+              >
+                Todas as turmas
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="px-4 py-12 sm:px-6">
         <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-3">

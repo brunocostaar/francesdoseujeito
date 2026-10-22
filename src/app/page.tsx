@@ -6,9 +6,14 @@ import { ExamesDestaque } from "@/components/sections/ExamesDestaque";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { Hero } from "@/components/sections/Hero";
 import { SobreProfessora } from "@/components/sections/SobreProfessora";
+import { TurmasAbertas } from "@/components/sections/TurmasAbertas";
 import { faq } from "@/content/faq";
 import { professora } from "@/content/professora";
 import { site } from "@/content/site";
+
+// A faixa de turmas abertas some no dia seguinte ao início da turma; sem
+// revalidar, ela ficaria congelada na data do último deploy.
+export const revalidate = 86400;
 
 /**
  * Dados estruturados: descrevem a escola e associam as perguntas visíveis
@@ -53,6 +58,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Hero />
+      <TurmasAbertas />
       <ComoFunciona />
       <SobreProfessora />
       <CursosGrid />

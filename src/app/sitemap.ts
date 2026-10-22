@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { atividades } from "@/content/atividades";
 import { cursos } from "@/content/cursos";
 import { exames } from "@/content/exames";
 import { site } from "@/content/site";
@@ -20,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: url(), changeFrequency: "monthly", priority: 1 },
     { url: url("/cursos"), changeFrequency: "monthly", priority: 0.9 },
     { url: url("/teste-de-nivel"), changeFrequency: "monthly", priority: 0.9 },
+    { url: url("/atividades"), changeFrequency: "weekly", priority: 0.8 },
+    { url: url("/turmas"), changeFrequency: "weekly", priority: 0.8 },
     ...cursos.map((curso) => ({
       url: url(`/cursos/${curso.slug}`),
       changeFrequency: "monthly" as const,
@@ -29,6 +32,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: url(`/exames/${exame.slug}`),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    ...atividades.map((atividade) => ({
+      url: url(`/atividades/${atividade.nivel}/${atividade.slug}`),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     })),
   ];
 }

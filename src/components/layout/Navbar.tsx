@@ -91,6 +91,18 @@ export function Navbar() {
             Teste de nível
           </Link>
 
+          <Link
+            href="/atividades"
+            className={cn(
+              "rounded-full px-4 py-2 text-sm font-semibold transition-colors",
+              pathname.startsWith("/atividades")
+                ? "text-bordeaux"
+                : "text-encre hover:text-bordeaux",
+            )}
+          >
+            Atividades online
+          </Link>
+
           <ItemComDropdown
             rotulo="Exames de francês"
             id="menu-exames"
@@ -305,6 +317,14 @@ function MenuMobile({ onNavegar }: { onNavegar: () => void }) {
           className="clay clay-press font-display block px-6 py-4 text-lg font-semibold"
         >
           Teste de nível
+        </Link>
+
+        <Link
+          href="/atividades"
+          onClick={onNavegar}
+          className="clay clay-press font-display block px-6 py-4 text-lg font-semibold"
+        >
+          Atividades online
         </Link>
 
         <details className="clay group px-6 py-1">

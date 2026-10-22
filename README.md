@@ -8,7 +8,7 @@ Next.js 16 (App Router) · TypeScript · Tailwind v4 · site 100% estático.
 ```bash
 pnpm install
 pnpm dev      # http://localhost:3000
-pnpm build    # gera as 11 páginas estáticas + robots, sitemap e cartão de link
+pnpm build    # gera as páginas estáticas + robots, sitemap e cartão de link
 pnpm lint
 ```
 
@@ -84,13 +84,25 @@ preços e questões sem abrir um componente.
 | `src/content/exames.ts`         | DELF/DALF e TCF/TEF                        |
 | `src/content/faq.ts`            | perguntas frequentes                       |
 | `src/content/teste/questoes.ts` | as 24 questões do teste de nível         |
+| `src/content/atividades.ts`     | atividades online: quadro + 10 questões  |
+| `src/content/turmas.ts`         | turmas com inscrição aberta               |
+
+**Atividade nova:** acrescente um objeto em `atividades.ts` com o `nivel`
+certo. O hub, a página, a navegação "próxima atividade" e o sitemap saem
+daí; um nível que ganha a primeira atividade sai sozinho do bloco
+"Em breve".
+
+**Turma nova:** acrescente em `turmas.ts` com a data de `inicio`. Ela aparece
+na faixa da home, em `/turmas` e na página do nível, e some sozinha no dia
+seguinte ao início (as páginas revalidam uma vez por dia). Com a lista
+vazia, a faixa some e `/turmas` convida para a lista de espera.
 
 Dois utilitários centrais:
 
 - **`src/lib/whatsapp.ts`** — gerador único dos links. Nenhum componente monta
   uma URL de `wa.me` na mão; para mudar o texto de uma CTA, edite o helper
   correspondente (`msgCurso`, `msgExame`, `msgTesteNivel`, `msgGeral`,
-  `msgAulaExperimental`).
+  `msgAulaExperimental`, `msgAtividade`, `msgTurma`, `msgListaEspera`).
 - **`src/lib/nivel.ts`** — pontuação do teste de nível.
 
 ### Rotas
@@ -101,6 +113,9 @@ Dois utilitários centrais:
 /cursos                 grade + tabela comparativa
 /cursos/[nivel]         a1, a2, b1, b2, c1, c2 (estáticas)
 /exames/[exame]         delf-dalf, tcf-tef (estáticas)
+/atividades             hub das atividades online, por nível
+/atividades/[nivel]/[slug]  quadro de revisão + quiz + envio à professora
+/turmas                 turmas com inscrição aberta (revalida diariamente)
 ```
 
 ---

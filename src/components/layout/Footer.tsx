@@ -63,6 +63,22 @@ export function Footer() {
                   Teste de nível gratuito
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/atividades"
+                  className="text-encre-soft hover:text-bordeaux text-sm"
+                >
+                  Atividades online
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/turmas"
+                  className="text-encre-soft hover:text-bordeaux text-sm"
+                >
+                  Turmas abertas
+                </Link>
+              </li>
             </ul>
           </div>
 
