@@ -16,6 +16,8 @@ export type Turma = {
   /** Identificador estável, só para a lista (ex.: "a1-nov-2026"). */
   id: string;
   nivel: Nivel;
+  /** Nome de vitrine da turma (ex.: "Francês A1.1 - Iniciante"). Sem ele, usa o nível. */
+  nome?: string;
   formato: "grupo" | "individual";
   /** Data de início no formato AAAA-MM-DD. */
   inicio: string;
@@ -24,19 +26,21 @@ export type Turma = {
   vagas?: number;
   preco?: string;
   observacao?: string;
+  /** Mensagem pronta do WhatsApp para "Quero uma vaga". Sem ela, usa a padrão. */
+  mensagem?: string;
 };
 
 export const turmas: Turma[] = [
-  // Exemplo — descomente e troque pelos dados reais:
-  // {
-  //   id: "a1-nov-2026",
-  //   nivel: "a1",
-  //   formato: "grupo",
-  //   inicio: "2026-11-10",
-  //   diasHorario: "Terças e quintas, 19h às 20h",
-  //   vagas: 4,
-  //   preco: "R$ 280/mês",
-  // },
+  {
+    id: "frances1-nov-2026",
+    nivel: "a1",
+    nome: "Francês A1.1 - Iniciante",
+    formato: "grupo",
+    inicio: "2026-11-23",
+    diasHorario: "Segundas-feiras às 18h30",
+    mensagem:
+      "Tenho interesse na turma Francês A1.1 - Iniciante, do horário das 18h30 às segundas-feiras. Poderia me fornecer mais informações?",
+  },
 ];
 
 const FUSO = "America/Sao_Paulo";
@@ -59,7 +63,11 @@ export function turmasAbertasDoNivel(nivel: Nivel): Turma[] {
 }
 
 /** "10 de novembro" — meio-dia evita a virada de data por fuso. */
-export function dataInicio(turma: Turma, comDiaDaSemana = false): string {
+export function dataInicio(
+  turma: Turma,
+  comDiaDaSemana = false,
+  comAno = false,
+): string {
   return new Date(`${turma.inicio}T12:00:00-03:00`).toLocaleDateString(
     "pt-BR",
     {
@@ -67,12 +75,14 @@ export function dataInicio(turma: Turma, comDiaDaSemana = false): string {
       month: "long",
       timeZone: FUSO,
       ...(comDiaDaSemana ? { weekday: "long" } : {}),
+      ...(comAno ? { year: "numeric" } : {}),
     },
   );
 }
 
-/** "A1 (Iniciante) em grupo" */
+/** "Francês A1.1 - Iniciante", ou "A1 (Iniciante) em grupo" se a turma não tiver nome. */
 export function nomeTurma(turma: Turma): string {
+  if (turma.nome) return turma.nome;
   const curso = getCurso(turma.nivel);
   const nivel = curso
     ? `${curso.nivel} (${curso.titulo})`

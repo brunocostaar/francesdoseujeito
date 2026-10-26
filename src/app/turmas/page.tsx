@@ -38,14 +38,20 @@ export default function TurmasPage() {
           nivel="h1"
           sobretitulo="Inscriptions ouvertes"
           titulo="Turmas abertas"
-          descricao="As próximas turmas em grupo e os horários livres para aulas individuais. As vagas são poucas de propósito: grupo pequeno é o que deixa todo mundo falar."
+          descricao="Turmas online em grupo, em horários predefinidos, para você que gosta de aprender junto com outras pessoas!"
         />
       </section>
 
       <section className="px-4 py-12 sm:px-6">
         <div className="mx-auto max-w-6xl">
           {abertas.length > 0 ? (
-            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <ul
+              className={
+                abertas.length === 1
+                  ? "mx-auto max-w-xl"
+                  : "grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+              }
+            >
               {abertas.map((turma) => (
                 <li key={turma.id}>
                   <CardTurma turma={turma} />

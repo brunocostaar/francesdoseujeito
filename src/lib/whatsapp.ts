@@ -1,4 +1,5 @@
 import { site } from "@/content/site";
+import { dataInicio, nomeTurma, type Turma } from "@/content/turmas";
 
 /**
  * Gerador único de links de WhatsApp.
@@ -70,8 +71,16 @@ function listar(numeros: number[]): string {
 }
 
 /** CTA de uma turma aberta (faixa da home, /turmas, página do nível). */
-export function msgTurma(nomeTurma: string, inicio: string): string {
-  return `Oi! Vim pelo site e quero uma vaga na turma ${nomeTurma} que começa em ${inicio}. Ainda tem vaga?`;
+export function msgTurma(turma: Turma): string {
+  return (
+    turma.mensagem ??
+    `Oi! Vim pelo site e quero uma vaga na turma ${nomeTurma(turma)} que começa em ${dataInicio(turma)}. Ainda tem vaga?`
+  );
+}
+
+/** Na dúvida sobre o nível da turma: marca a conversa gratuita. */
+export function msgTurmaNivel(turma: Turma): string {
+  return `Oi! Tenho interesse na turma ${nomeTurma(turma)}, mas não tenho certeza se esse é o meu nível. Posso marcar uma conversa gratuita?`;
 }
 
 /** Sem turma aberta no nível: pede para ser avisado da próxima. */

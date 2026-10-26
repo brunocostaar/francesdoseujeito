@@ -7,7 +7,7 @@ import { ClayCard } from "@/components/ui/ClayCard";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { cursos, getCurso, type Nivel } from "@/content/cursos";
 import { site } from "@/content/site";
-import { dataInicio, nomeTurma, turmasAbertasDoNivel } from "@/content/turmas";
+import { dataInicio, turmasAbertasDoNivel } from "@/content/turmas";
 import { msgCurso, msgTurma } from "@/lib/whatsapp";
 
 type Props = { params: Promise<{ nivel: string }> };
@@ -145,7 +145,7 @@ export default async function CursoPage({ params }: Props) {
             </div>
             <div className="flex flex-wrap items-center gap-4">
               <WhatsAppButton
-                mensagem={msgTurma(nomeTurma(proximaTurma), dataInicio(proximaTurma))}
+                mensagem={msgTurma(proximaTurma)}
               >
                 Quero uma vaga
               </WhatsAppButton>

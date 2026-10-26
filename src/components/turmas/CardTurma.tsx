@@ -2,36 +2,35 @@ import { CalendarDays, Clock } from "lucide-react";
 import { ClayCard } from "@/components/ui/ClayCard";
 import { Pill } from "@/components/ui/Pill";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { getCurso } from "@/content/cursos";
 import { dataInicio, nomeTurma, type Turma } from "@/content/turmas";
-import { msgTurma } from "@/lib/whatsapp";
+import { msgTurma, msgTurmaNivel, whatsappLink } from "@/lib/whatsapp";
 
 export function CardTurma({ turma }: { turma: Turma }) {
-  const curso = getCurso(turma.nivel);
-
   return (
     <ClayCard className="flex h-full flex-col">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="font-display text-bordeaux text-4xl leading-none font-semibold">
-            {curso?.nivel ?? turma.nivel.toUpperCase()}
+          <p className="text-encre-soft text-sm">
+            Você está se inscrevendo no curso
           </p>
-          <p className="text-encre mt-2 font-semibold">{curso?.titulo}</p>
+          <p className="font-display text-bordeaux mt-1 text-2xl leading-tight font-semibold uppercase sm:text-3xl">
+            {nomeTurma(turma)}
+          </p>
         </div>
         <Pill>{turma.formato === "grupo" ? "Em grupo" : "Individual"}</Pill>
       </div>
 
-      <ul className="text-encre-soft mt-6 flex flex-col gap-2.5">
+      <ul className="text-encre mt-6 flex flex-col gap-2.5 font-semibold tracking-wide uppercase">
+        <li className="flex items-center gap-2.5">
+          <Clock className="text-bordeaux size-4 shrink-0" aria-hidden="true" />
+          {turma.diasHorario}
+        </li>
         <li className="flex items-center gap-2.5">
           <CalendarDays
             className="text-bordeaux size-4 shrink-0"
             aria-hidden="true"
           />
-          Começa {dataInicio(turma, true)}
-        </li>
-        <li className="flex items-center gap-2.5">
-          <Clock className="text-bordeaux size-4 shrink-0" aria-hidden="true" />
-          {turma.diasHorario}
+          Início: {dataInicio(turma, false, true)}
         </li>
       </ul>
 
@@ -54,13 +53,19 @@ export function CardTurma({ turma }: { turma: Turma }) {
         </p>
       )}
 
-      <div className="mt-auto pt-7">
-        <WhatsAppButton
-          mensagem={msgTurma(nomeTurma(turma), dataInicio(turma))}
-          className="w-full"
-        >
-          Quero uma vaga
-        </WhatsAppButton>
+      <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 pt-7">
+        <WhatsAppButton mensagem={msgTurma(turma)}>Quero uma vaga</WhatsAppButton>
+        <p className="text-encre-soft max-w-56 text-sm leading-snug text-pretty">
+          Não tem certeza se esse é o seu nível?{" "}
+          <a
+            href={whatsappLink(msgTurmaNivel(turma))}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-bordeaux font-semibold underline underline-offset-4"
+          >
+            Marque uma conversa gratuita!
+          </a>
+        </p>
       </div>
     </ClayCard>
   );

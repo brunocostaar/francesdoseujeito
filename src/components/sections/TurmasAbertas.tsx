@@ -20,7 +20,7 @@ export function TurmasAbertas() {
     <section aria-labelledby="turmas-abertas" className="px-4 sm:px-6">
       <div className="clay clay-encre mx-auto flex max-w-6xl flex-col gap-6 px-7 py-7 sm:px-10 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex items-start gap-4">
-          <span className="clay clay-or flex size-12 shrink-0 items-center justify-center rounded-full">
+          <span className="bg-or text-encre flex size-12 shrink-0 items-center justify-center rounded-full">
             <CalendarDays className="size-5" aria-hidden="true" />
           </span>
           <div>
@@ -31,9 +31,16 @@ export function TurmasAbertas() {
               id="turmas-abertas"
               className="font-display mt-1 text-2xl leading-snug font-semibold text-balance"
             >
-              {varias
-                ? `${abertas.length} turmas começando — a próxima em ${dataInicio(proxima)}`
-                : `Turma ${nomeTurma(proxima)} começa em ${dataInicio(proxima)}`}
+              {varias ? (
+                `${abertas.length} turmas começando — a próxima em ${dataInicio(proxima)}`
+              ) : (
+                <>
+                  <span className="block">Turma {nomeTurma(proxima)}</span>
+                  <span className="bg-bordeaux mt-2 inline-block rounded-full px-4 py-1.5 font-sans text-sm font-bold text-white">
+                    Começa em {dataInicio(proxima)}
+                  </span>
+                </>
+              )}
             </h2>
             <p className="mt-1 text-white/80">
               {proxima.diasHorario}
@@ -58,7 +65,7 @@ export function TurmasAbertas() {
           ) : (
             <>
               <WhatsAppButton
-                mensagem={msgTurma(nomeTurma(proxima), dataInicio(proxima))}
+                mensagem={msgTurma(proxima)}
               >
                 Quero uma vaga
               </WhatsAppButton>
